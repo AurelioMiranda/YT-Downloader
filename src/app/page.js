@@ -39,11 +39,19 @@ export default function Home() {
     setError('');
 
     try {
-      const response = await axios.post('/api/download', { url, quality });
+      const response = await fetch('/api/download', {
+        method: 'POST',
+        body: JSON.stringify({ url, quality }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to download video');
+      }
+
+      const blob = await response.blob();
       const link = document.createElement('a');
-      link.href = response.data.downloadUrl;
+      link.href = URL.createObjectURL(blob);
       link.setAttribute('download', 'video.mp4');
-      document.body.appendChild(link);
       link.click();
       link.remove();
     } catch (error) {
