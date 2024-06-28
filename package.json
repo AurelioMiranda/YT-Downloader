@@ -1,0 +1,8 @@
+{
+  "name": "youtube-downloader",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ]
+}
