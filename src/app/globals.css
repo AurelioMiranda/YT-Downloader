@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --input-bg-color: #ffffff;
+  --input-text-color: #000000;
+}
+
+.dark :root {
+  --input-bg-color: #1f2937;
+  --input-text-color: #ffffff;
+}
+
+input {
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+}
+
+select {
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  position: absolute;
+  width: -webkit-fill-available;
+}
+
+html, body {
+  height: 100vh;
+}
+
+.content-container {
+  height: 100%;
+}
