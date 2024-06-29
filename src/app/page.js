@@ -51,7 +51,15 @@ export default function Home() {
       const blob = await response.blob();
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
-      link.setAttribute('download', 'video.mp4');
+      const contentDisposition = response.headers.get('Content-Disposition');
+      const title = contentDisposition.split(';').find(part => part.trim().startsWith('title'));
+
+      if (title) {
+        link.setAttribute('download', `${title.split('=')[1].replaceAll("\"", "")}.mp4`);
+      } else {
+        link.setAttribute('download', 'video.mp4');
+      }
+
       link.click();
       link.remove();
     } catch (error) {
@@ -62,7 +70,7 @@ export default function Home() {
   };
 
   return (
-    <div style={{height: '100vh'}}>
+    <div style={{ height: '100vh' }}>
       <nav className={`nav ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
         <h1 className="text-3xl font-bold mb-4">YouTube Downloader</h1>
         <button
