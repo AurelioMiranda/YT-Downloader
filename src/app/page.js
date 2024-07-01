@@ -106,6 +106,35 @@ export default function Home() {
         </button>
         {error && <p style={{ color: 'red' }}>{error}</p>}
       </div>
+      <footer>
+        <p>
+          &copy; 2024
+          <a href="https://aurelio-miranda.netlify.app/" target="_blank" rel="noopener noreferrer"> Aurélio Miranda</a>
+          . All rights reserved.
+        </p>
+        <div>
+          <a href="https://www.instagram.com/l_aurelio_l/" target="_blank" rel="noopener noreferrer">
+            <img maw={240} width="25" height="25"
+              src="https://www.iconpacks.net/icons/2/free-instagram-logo-icon-3497-thumb.png"
+              alt="Instagram" />
+          </a>
+          <a href="https://www.linkedin.com/in/mirandex/" target="_blank" rel="noopener noreferrer">
+            <img maw={240} width="25" height="25"
+              src="https://cdn-icons-png.flaticon.com/512/61/61109.png"
+              alt="LinkedIn" />
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100008999912309" target="_blank" rel="noopener noreferrer">
+            <img maw={240} width="25" height="25"
+              src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Facebook%2BIcon%2BBlack.png"
+              alt="Facebook" />
+          </a>
+          <a href="mailto:aureliogaboleiro49@gmail.com">
+            <img maw={240} width="25" height="auto"
+              src="https://www.pngmart.com/files/15/Email-Symbol-PNG-Transparent.png"
+              alt="Email" />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }

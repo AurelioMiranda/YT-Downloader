@@ -9,7 +9,7 @@
 
 .dark :root {
   --input-bg-color: #1f2937;
-  --input-text-color: #ffffff;
+  --input-text-color: #C1C2C5;;
 }
 
 input {
@@ -36,4 +36,55 @@ html, body {
 
 .content-container {
   height: 100%;
+}
+
+footer {
+  padding: 30px;
+  background: #252525;
+  display: flex!important;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer p {
+  width: fit-content;
+  margin: 2px;
+  color: #C1C2C5;;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  margin: 0px 5px;
+}
+
+footer div a {
+  filter: invert(1);
+}
+
+footer div a {
+  margin-left: 10px;
+}
+
+footer div a:hover {
+  filter: invert(9%) invert(21%) sepia(18%) saturate(7220%) hue-rotate(254deg) brightness(96%) contrast(88%);
+}
+
+/* Scroll bar styles and stuff */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #252525;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
