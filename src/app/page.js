@@ -77,7 +77,12 @@ export default function Home() {
           onClick={handleToggleDarkMode}
           className="mb-4 px-4 py-2 border rounded-md bg-gray-800 text-white dark:bg-gray-200 dark:text-black"
         >
-          Toggle Dark Mode
+          {isDarkMode ? (
+            <img src="/sun.png" alt="Light Mode" width="20" height="20" />
+          ) : (
+            <img src="/moon.png" alt="Dark Mode" width="20" height="20"
+            style={{filter: "invert(1)"}} />
+          )}
         </button>
       </nav>
       <div className={`content-container flex flex-col items-center justify-center ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
